@@ -1,31 +1,189 @@
+```html
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>TechieBot Tech Support  (By yours truly)</title>
+    <title>TechieBot Tech Support (By yours truly)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="terminal">
+    <!-- BOT SWITCHER -->
 
-        <h1>TECHIEBOT TECH SUPPORT</h1>
+    <div class="navbar">
 
-        <p>SYSTEM STATUS: ONLINE</p>
+        <button onclick="showBot('techieBot')">
+            TechieBot
+        </button>
 
-        <p>> Welcome to TechieBot.</p>
-        <p>> Automated technical assistance system.</p>
-        <p>> Please select a problem below.</p>
-
-        <div id="output"></div>
-
-        <div id="buttons"></div>
+        <button onclick="showBot('mathBot')">
+            MathBot
+        </button>
 
     </div>
 
+
+    <!-- TECHIEBOT -->
+
+    <div id="techieBot" class="bot active">
+
+        <div class="terminal">
+
+            <h1>TECHIEBOT TECH SUPPORT</h1>
+
+            <p>SYSTEM STATUS: ONLINE</p>
+
+            <p>> Welcome to TechieBot.</p>
+            <p>> Automated technical assistance system.</p>
+            <p>> Please select a problem below.</p>
+
+            <div id="output"></div>
+
+            <div id="buttons"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MATHBOT -->
+
+    <div id="mathBot" class="bot">
+
+        <div class="terminal">
+
+            <h1>MATHBOT</h1>
+
+            <p>SYSTEM STATUS: ONLINE</p>
+
+            <p>> Welcome to MathBot.</p>
+
+            <p>> Type a calculation below.</p>
+
+            <input
+                id="mathInput"
+                type="text"
+                placeholder="Example: 12.5 + 7"
+            >
+
+            <button onclick="mathBotCalculate()">
+                Calculate
+            </button>
+
+            <p id="mathOutput"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- YOUR EXISTING TECHIEBOT JAVASCRIPT -->
+
     <script src="script.js"></script>
+
+
+    <!-- MATHBOT JAVASCRIPT -->
+
+    <script>
+
+        function mathBotCalculate() {
+
+            let message = document.getElementById("mathInput").value;
+
+
+            if (message.includes("+")) {
+
+                let numbers = message.split("+");
+
+                let num1 = Number(numbers[0]);
+                let num2 = Number(numbers[1]);
+
+                document.getElementById("mathOutput").textContent =
+                    num1 + num2;
+
+            }
+
+            else if (message === "1 Divided by 1") {
+
+                document.getElementById("mathOutput").textContent =
+                    "Michelle";
+
+            }
+
+            else if (message === "1 divided by 1") {
+
+                document.getElementById("mathOutput").textContent =
+                    "Michelle";
+
+            }
+
+            else if (message.includes("-")) {
+
+                let numbers = message.split("-");
+
+                let num1 = Number(numbers[0]);
+                let num2 = Number(numbers[1]);
+
+                document.getElementById("mathOutput").textContent =
+                    num1 - num2;
+
+            }
+
+            else if (message.includes("*")) {
+
+                let numbers = message.split("*");
+
+                let num1 = Number(numbers[0]);
+                let num2 = Number(numbers[1]);
+
+                document.getElementById("mathOutput").textContent =
+                    num1 * num2;
+
+            }
+
+            else if (message.includes("/")) {
+
+                let numbers = message.split("/");
+
+                let num1 = Number(numbers[0]);
+                let num2 = Number(numbers[1]);
+
+                document.getElementById("mathOutput").textContent =
+                    num1 / num2;
+
+            }
+
+            else {
+
+                document.getElementById("mathOutput").textContent =
+                    "Sorry I don't know that yet. Either you inputted it wrong, or I simply don't know it.";
+
+            }
+
+        }
+
+
+        // SWITCH BETWEEN TECHIEBOT AND MATHBOT
+
+        function showBot(botName) {
+
+            let bots = document.querySelectorAll(".bot");
+
+            bots.forEach(function(bot) {
+
+                bot.classList.remove("active");
+
+            });
+
+            document.getElementById(botName).classList.add("active");
+
+        }
+
+    </script>
 
 </body>
 
 </html>
+```
+
