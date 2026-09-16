@@ -1,77 +1,134 @@
-body {
-    background-color: black;
-    color: #00ff00;
-    font-family: "Helvetica Neue", monospace;
-    font-size: 18px;
-    margin: 30px;
-}
-
-.terminal {
-    border: 1px solid white;
-    padding: 100px;
-    max-width: 2000px;
-    margin: auto;
-}
-
-h1 {
-    font-size: 30px;
-    border-bottom: 1px solid white;
-    font-weight: bold
-    padding-bottom: 10px;
-}
-
-p {
-    font-size: 18px;
-       font-family: "Courier New", monospace;
-}
-
-button {
-    background-color: black;
-    color: #00ff00;
-    border: 1px solid #white;
-    font-family: "Courier New", monospace;
-    font-size: 18px;
-    font-weight: bold
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #00ff00;
-    color: black;
-}
-
-.warning {
-    font-weight: bold;
-}
-
 ```css
-/* BOT SWITCHER */
+/* =========================
+   GENERAL PAGE
+   ========================= */
+
+body {
+    background-color: #111;
+    color: #eee;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   TOP BOT TOGGLE
+   ========================= */
 
 .navbar {
-    text-align: center;
+    background-color: #222;
     padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #555;
 }
 
 .navbar button {
+    background-color: #333;
+    color: #eee;
+    border: 1px solid #777;
     padding: 10px 20px;
     margin: 5px;
+    font-family: monospace;
+    font-size: 16px;
     cursor: pointer;
 }
 
-
-/* HIDE BOTS BY DEFAULT */
-
-.bot {
-    display: none;
+.navbar button:hover {
+    background-color: #444;
 }
 
 
-/* SHOW THE CURRENT BOT */
+/* =========================
+   TERMINAL
+   ========================= */
 
-.bot.active {
-    display: block;
+.terminal {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+
+    background-color: #000;
+
+    border: 2px solid #555;
+    border-radius: 5px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+h1 {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+
+/* =========================
+   TEXT
+   ========================= */
+
+p {
+    font-size: 16px;
+}
+
+
+/* =========================
+   INPUTS
+   ========================= */
+
+input {
+    background-color: #111;
+    color: #eee;
+
+    border: 1px solid #777;
+
+    padding: 10px;
+
+    font-family: monospace;
+    font-size: 16px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+button {
+    font-family: monospace;
+}
+
+.terminal button {
+    background-color: #333;
+    color: #eee;
+
+    border: 1px solid #777;
+
+    padding: 10px 15px;
+
+    margin: 5px;
+
+    cursor: pointer;
+}
+
+.terminal button:hover {
+    background-color: #444;
+}
+
+
+/* =========================
+   BOT OUTPUT
+   ========================= */
+
+#output,
+#buttons,
+#mathOutput {
+    margin-top: 15px;
 }
 ```
-
