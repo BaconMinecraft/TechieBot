@@ -4,8 +4,8 @@
    ========================= */
 
 body {
-    background-color: #111;
-    color: #eee;
+    background-color: black;
+    color: #28FE14;
     font-family: monospace;
     margin: 0;
     padding: 0;
@@ -49,9 +49,9 @@ body {
     margin: 40px auto;
     padding: 25px;
 
-    background-color: #000;
+    background-color: grey;
 
-    border: 2px solid #555;
+    border: 2px solid white;
     border-radius: 5px;
 
     box-sizing: border-box;
