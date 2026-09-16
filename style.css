@@ -45,3 +45,33 @@ button:hover {
 .warning {
     font-weight: bold;
 }
+
+```css
+/* BOT SWITCHER */
+
+.navbar {
+    text-align: center;
+    padding: 15px;
+}
+
+.navbar button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+/* HIDE BOTS BY DEFAULT */
+
+.bot {
+    display: none;
+}
+
+
+/* SHOW THE CURRENT BOT */
+
+.bot.active {
+    display: block;
+}
+```
+
