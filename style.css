@@ -7,7 +7,7 @@ body {
 }
 
 .terminal {
-    border: 1px solid #00ff00;
+    border: 1px solid #white;
     padding: 20px;
     max-width: 800px;
     margin: auto;
@@ -26,7 +26,7 @@ p {
 button {
     background-color: black;
     color: #00ff00;
-    border: 1px solid #00ff00;
+    border: 1px solid #white;
     font-family: "Courier New", monospace;
     font-size: 18px;
     padding: 10px;
